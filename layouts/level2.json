@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.24488383633725483,
+    "zoomFactor": 0.19415059112740768,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -529,6 +529,23 @@
       "x": 3455,
       "y": 0,
       "zOrder": 3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 400,
+      "keepRatio": true,
+      "layer": "",
+      "name": "FlashlightRadius",
+      "persistentUuid": "32bcc3ce-e7fa-4b01-acbf-90e93baaaf54",
+      "width": 400,
+      "x": 901,
+      "y": 518,
+      "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
