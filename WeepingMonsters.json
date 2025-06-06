@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 226,
+    "build": 231,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -118,7 +118,7 @@
       {
         "file": "Assets/duck_yellow.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"Assets/duck_yellow.png\",\"extension\":\".png\"}",
         "name": "Assets\\duck_yellow.png",
         "smoothed": true,
         "userAdded": false
@@ -162,13 +162,172 @@
         "name": "Assets\\circlepng.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Flat Heart Empty.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Flat Heart Empty.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/c0bac0102b6467c3f428f093a162ad8aedc069b2bf3cbe65f344353c3695ecdf_Flat Heart Empty.png",
+          "name": "Flat Heart Empty.png"
+        }
+      },
+      {
+        "file": "assets/Flat Heart Filled.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Flat Heart Filled.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/4158f811cf0bb821a58f98d8cb78f2257ee590210091ab56b46703e94044ee7a_Flat Heart Filled.png",
+          "name": "Flat Heart Filled.png"
+        }
+      },
+      {
+        "file": "Assets/duck_yellow_red_eye.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"Assets/duck_yellow_red_eye.png\",\"extension\":\".png\"}",
+        "name": "Assets\\duck_yellow_red_eye.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/duck_yellow_fast.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\duck_yellow_fast.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Assets_duck_yellow.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Assets\\duck_yellow",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/duck_yellow_light.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\duck_yellow_light.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Assets_duck_yellow2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Assets\\duck_yellow2",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
   },
-  "objects": [],
+  "objects": [
+    {
+      "assetStoreId": "c807d51d4bab0016401aef4d64d10d137f5ac8738ffa15865e1bc81435b9720b",
+      "name": "FlatHeartBar",
+      "type": "TiledUnitsBar::TiledUnitsBar",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "UnitWidth": 90,
+        "HideBackground": true,
+        "ShowBackground": false
+      },
+      "childrenContent": {
+        "Background": {
+          "bottomMargin": 0,
+          "height": 90,
+          "leftMargin": 0,
+          "rightMargin": 0,
+          "texture": "Flat Heart Empty.png",
+          "tiled": false,
+          "topMargin": 0,
+          "width": 270
+        },
+        "Bar": {
+          "height": 90,
+          "texture": "Flat Heart Empty.png",
+          "width": 90
+        },
+        "FillBar": {
+          "height": 90,
+          "texture": "Flat Heart Filled.png",
+          "width": 90
+        }
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "GameTimer",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Time Remaining : ",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 42,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Time Remaining : ",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "center",
+        "characterSize": 42,
+        "color": "255;255;255"
+      }
+    }
+  ],
   "objectsFolderStructure": {
-    "folderName": "__ROOT"
+    "folderName": "__ROOT",
+    "children": [
+      {
+        "objectName": "FlatHeartBar"
+      },
+      {
+        "objectName": "GameTimer"
+      }
+    ]
   },
   "objectsGroups": [],
   "variables": [
@@ -176,6 +335,16 @@
       "name": "SpawnRate",
       "type": "string",
       "value": "3"
+    },
+    {
+      "name": "MaxTime",
+      "type": "number",
+      "value": 40
+    },
+    {
+      "name": "gameResult",
+      "type": "boolean",
+      "value": false
     }
   ],
   "layouts": [
@@ -190,9 +359,18 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/level2"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/end-scene"
     }
   ],
   "externalEvents": [],
-  "eventsFunctionsExtensions": [],
+  "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/tiledunitsbar"
+    }
+  ],
   "externalLayouts": []
 }

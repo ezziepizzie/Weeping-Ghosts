@@ -18,10 +18,28 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.19415059112740768,
+    "zoomFactor": 0.2368956372544661,
     "windowMask": false
   },
-  "objectsGroups": [],
+  "objectsGroups": [
+    {
+      "name": "Enemy",
+      "objects": [
+        {
+          "name": "Enemy1"
+        },
+        {
+          "name": "Enemy2"
+        },
+        {
+          "name": "Enemy3"
+        },
+        {
+          "name": "Enemy4"
+        }
+      ]
+    }
+  ],
   "variables": [
     {
       "name": "isLookingFront",
@@ -549,6 +567,38 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "UI",
+      "name": "FlatHeartBar",
+      "persistentUuid": "1f345905-9a44-4f31-8453-60627c05635d",
+      "width": 0,
+      "x": 1433,
+      "y": 959,
+      "zOrder": 9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "UI",
+      "name": "GameTimer",
+      "persistentUuid": "cfe4ebf3-df29-4e55-8188-8b00470a04fe",
+      "width": 0,
+      "x": 50,
+      "y": 72,
+      "zOrder": 10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -556,7 +606,13 @@
       "assetStoreId": "",
       "name": "Flashlight",
       "type": "Lighting::LightObject",
-      "variables": [],
+      "variables": [
+        {
+          "name": "FlashlightisOn",
+          "type": "boolean",
+          "value": true
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "content": {
@@ -651,6 +707,26 @@
           "name": "isPaused",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "IsAttacking",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "canPause",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "MovementSpeed",
+          "type": "number",
+          "value": 50
+        },
+        {
+          "name": "NumberofHit",
+          "type": "number",
+          "value": 1
         }
       ],
       "effects": [],
@@ -1202,6 +1278,312 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Enemy2",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "TargetXPosition",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "TargetYPosition",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "isPaused",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "IsAttacking",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "NumberofHit",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "canPause",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "MovementSpeed",
+          "type": "number",
+          "value": 50
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "Assets\\duck_yellow",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\duck_yellow_red_eye.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 99,
+                        "y": 0
+                      },
+                      {
+                        "x": 99,
+                        "y": 95
+                      },
+                      {
+                        "x": 0,
+                        "y": 95
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Enemy3",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "TargetXPosition",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "TargetYPosition",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "isPaused",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "IsAttacking",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "NumberofHit",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "canPause",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "MovementSpeed",
+          "type": "number",
+          "value": 100
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "Assets\\duck_yellow",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\duck_yellow_fast.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 99,
+                        "y": 0
+                      },
+                      {
+                        "x": 99,
+                        "y": 95
+                      },
+                      {
+                        "x": 0,
+                        "y": 95
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Enemy4",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "TargetXPosition",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "TargetYPosition",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "canPause",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "isPaused",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "IsAttacking",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "NumberofHit",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "MovementSpeed",
+          "type": "number",
+          "value": 50
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "Assets\\duck_yellow",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\duck_yellow2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 99,
+                        "y": 0
+                      },
+                      {
+                        "x": 99,
+                        "y": 95
+                      },
+                      {
+                        "x": 0,
+                        "y": 95
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -1230,6 +1612,15 @@
       },
       {
         "objectName": "Enemy1"
+      },
+      {
+        "objectName": "Enemy2"
+      },
+      {
+        "objectName": "Enemy3"
+      },
+      {
+        "objectName": "Enemy4"
       },
       {
         "objectName": "EndPointFront"
@@ -1378,15 +1769,6 @@
             "",
             "EnemySpawnerFront"
           ]
-        },
-        {
-          "type": {
-            "value": "AjoutHasard"
-          },
-          "parameters": [
-            "",
-            "EndPointFront"
-          ]
         }
       ],
       "actions": [
@@ -1404,76 +1786,131 @@
         },
         {
           "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Enemy2",
+            "EnemySpawnerFront.X()",
+            "EnemySpawnerFront.Y()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Enemy3",
+            "EnemySpawnerFront.X()",
+            "EnemySpawnerFront.Y()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Enemy4",
+            "EnemySpawnerFront.X()",
+            "EnemySpawnerFront.Y()",
+            ""
+          ]
+        },
+        {
+          "type": {
             "value": "ResetTimer"
           },
           "parameters": [
             "",
             "\"EnemySpawnerFront\""
           ]
-        },
+        }
+      ],
+      "events": [
         {
-          "type": {
-            "value": "Tween::TweenBehavior::AddObjectScaleTween3"
-          },
-          "parameters": [
-            "Enemy1",
-            "Tween",
-            "\"MoveCloser\"",
-            "3",
-            "\"linear\"",
-            "8",
-            "",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetNumberObjectVariable"
-          },
-          "parameters": [
-            "Enemy1",
-            "TargetXPosition",
-            "=",
-            "EndPointFront.X()"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetNumberObjectVariable"
-          },
-          "parameters": [
-            "Enemy1",
-            "TargetYPosition",
-            "=",
-            "EndPointFront.Y()"
-          ]
-        },
-        {
-          "type": {
-            "value": "AddForceVersPos"
-          },
-          "parameters": [
-            "Enemy1",
-            "Enemy1.TargetXPosition",
-            "Enemy1.TargetYPosition",
-            "50",
-            "1"
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Enemy",
+          "conditions": [
+            {
+              "type": {
+                "value": "AjoutHasard"
+              },
+              "parameters": [
+                "",
+                "EndPointFront"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+              },
+              "parameters": [
+                "Enemy",
+                "Tween",
+                "\"MoveCloser\"",
+                "3",
+                "\"linear\"",
+                "8",
+                "",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Enemy",
+                "TargetYPosition",
+                "=",
+                "EndPointFront.Y()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Enemy",
+                "TargetXPosition",
+                "=",
+                "EndPointFront.X()"
+              ]
+            },
+            {
+              "type": {
+                "value": "AddForceVersPos"
+              },
+              "parameters": [
+                "Enemy",
+                "Enemy.TargetXPosition",
+                "Enemy.TargetYPosition",
+                "Enemy.MovementSpeed",
+                "1"
+              ]
+            }
           ]
         }
       ]
     },
     {
       "type": "BuiltinCommonInstructions::ForEach",
-      "object": "Enemy1",
+      "object": "Enemy",
       "conditions": [
         {
           "type": {
             "value": "CenterY"
           },
           "parameters": [
-            "Enemy1",
+            "Enemy",
             ">",
-            "Enemy1.TargetYPosition"
+            "Enemy.TargetYPosition"
           ]
         }
       ],
@@ -1483,7 +1920,7 @@
             "value": "Arreter"
           },
           "parameters": [
-            "Enemy1"
+            "Enemy"
           ]
         },
         {
@@ -1491,9 +1928,29 @@
             "value": "Tween::PauseTween"
           },
           "parameters": [
-            "Enemy1",
+            "Enemy",
             "Tween",
             "\"MoveCloser\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Enemy",
+            "IsAttacking",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "Enemy",
+            "\"AttackCooldown\""
           ]
         }
       ]
@@ -1532,15 +1989,6 @@
             "",
             "EnemySpawnerBack"
           ]
-        },
-        {
-          "type": {
-            "value": "AjoutHasard"
-          },
-          "parameters": [
-            "",
-            "EndPointBack"
-          ]
         }
       ],
       "actions": [
@@ -1558,76 +2006,131 @@
         },
         {
           "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Enemy2",
+            "EnemySpawnerBack.X()",
+            "EnemySpawnerBack.Y()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Enemy3",
+            "EnemySpawnerBack.X()",
+            "EnemySpawnerBack.Y()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Enemy4",
+            "EnemySpawnerBack.X()",
+            "EnemySpawnerBack.Y()",
+            ""
+          ]
+        },
+        {
+          "type": {
             "value": "ResetTimer"
           },
           "parameters": [
             "",
             "\"EnemySpawnerBack\""
           ]
-        },
+        }
+      ],
+      "events": [
         {
-          "type": {
-            "value": "Tween::TweenBehavior::AddObjectScaleTween3"
-          },
-          "parameters": [
-            "Enemy1",
-            "Tween",
-            "\"MoveCloser\"",
-            "3",
-            "\"linear\"",
-            "8",
-            "",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetNumberObjectVariable"
-          },
-          "parameters": [
-            "Enemy1",
-            "TargetXPosition",
-            "=",
-            "EndPointBack.X()"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetNumberObjectVariable"
-          },
-          "parameters": [
-            "Enemy1",
-            "TargetYPosition",
-            "=",
-            "EndPointBack.Y()"
-          ]
-        },
-        {
-          "type": {
-            "value": "AddForceVersPos"
-          },
-          "parameters": [
-            "Enemy1",
-            "Enemy1.TargetXPosition",
-            "Enemy1.TargetYPosition",
-            "50",
-            "1"
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Enemy",
+          "conditions": [
+            {
+              "type": {
+                "value": "AjoutHasard"
+              },
+              "parameters": [
+                "",
+                "EndPointBack"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+              },
+              "parameters": [
+                "Enemy",
+                "Tween",
+                "\"MoveCloser\"",
+                "3",
+                "\"linear\"",
+                "8",
+                "",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Enemy",
+                "TargetYPosition",
+                "=",
+                "EndPointBack.Y()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Enemy",
+                "TargetXPosition",
+                "=",
+                "EndPointBack.X()"
+              ]
+            },
+            {
+              "type": {
+                "value": "AddForceVersPos"
+              },
+              "parameters": [
+                "Enemy",
+                "Enemy.TargetXPosition",
+                "Enemy.TargetYPosition",
+                "50",
+                "1"
+              ]
+            }
           ]
         }
       ]
     },
     {
       "type": "BuiltinCommonInstructions::ForEach",
-      "object": "Enemy1",
+      "object": "Enemy",
       "conditions": [
         {
           "type": {
             "value": "CenterY"
           },
           "parameters": [
-            "Enemy1",
+            "Enemy",
             ">",
-            "Enemy1.TargetYPosition"
+            "Enemy.TargetYPosition"
           ]
         }
       ],
@@ -1637,7 +2140,7 @@
             "value": "Arreter"
           },
           "parameters": [
-            "Enemy1"
+            "Enemy"
           ]
         },
         {
@@ -1645,9 +2148,190 @@
             "value": "Tween::PauseTween"
           },
           "parameters": [
-            "Enemy1",
+            "Enemy",
             "Tween",
             "\"MoveCloser\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Enemy",
+            "IsAttacking",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "Enemy",
+            "\"AttackCooldown\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Enemy Attack and Health Bar Reduction"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "Flashlight",
+            "FlashlightisOn",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "CompareObjectTimer"
+          },
+          "parameters": [
+            "Flashlight",
+            "\"FlashlightTurnOff\"",
+            ">",
+            "1"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Lighting::SetRadius"
+          },
+          "parameters": [
+            "Flashlight",
+            "400"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Flashlight",
+            "FlashlightisOn",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "Flashlight",
+            "\"FlashlightTurnOff\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Turn off flashlight once being hit"
+    },
+    {
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "Enemy",
+      "conditions": [
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "Enemy",
+            "IsAttacking",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "CompareObjectTimer"
+          },
+          "parameters": [
+            "Enemy",
+            "\"AttackCooldown\"",
+            ">",
+            "3.5"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "TiledUnitsBar::TiledUnitsBar::SetValue"
+          },
+          "parameters": [
+            "FlatHeartBar",
+            "-",
+            "1",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Lighting::SetRadius"
+          },
+          "parameters": [
+            "Flashlight",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "Flashlight",
+            "\"FlashlightTurnOff\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Flashlight",
+            "FlashlightisOn",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "Enemy",
+            "\"AttackCooldown\""
           ]
         }
       ]
@@ -1799,7 +2483,7 @@
           },
           "parameters": [
             "FlashlightRadius",
-            "Enemy1",
+            "Enemy",
             "",
             "",
             ""
@@ -1810,9 +2494,20 @@
             "value": "BooleanObjectVariable"
           },
           "parameters": [
-            "Enemy1",
+            "Enemy",
             "isPaused",
             "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "Enemy",
+            "canPause",
+            "True",
             ""
           ]
         }
@@ -1823,7 +2518,7 @@
             "value": "Arreter"
           },
           "parameters": [
-            "Enemy1"
+            "Enemy"
           ]
         },
         {
@@ -1831,7 +2526,7 @@
             "value": "SetBooleanObjectVariable"
           },
           "parameters": [
-            "Enemy1",
+            "Enemy",
             "isPaused",
             "True",
             ""
@@ -1842,7 +2537,7 @@
             "value": "Tween::PauseTween"
           },
           "parameters": [
-            "Enemy1",
+            "Enemy",
             "Tween",
             "\"MoveCloser\""
           ]
@@ -1859,7 +2554,7 @@
           },
           "parameters": [
             "FlashlightRadius",
-            "Enemy1",
+            "Enemy",
             "",
             "",
             ""
@@ -1870,7 +2565,7 @@
             "value": "BooleanObjectVariable"
           },
           "parameters": [
-            "Enemy1",
+            "Enemy",
             "isPaused",
             "True",
             ""
@@ -1883,9 +2578,9 @@
             "value": "AddForceVersPos"
           },
           "parameters": [
-            "Enemy1",
-            "Enemy1.TargetXPosition",
-            "Enemy1.TargetYPosition",
+            "Enemy",
+            "Enemy.TargetXPosition",
+            "Enemy.TargetYPosition",
             "50",
             "1"
           ]
@@ -1895,7 +2590,7 @@
             "value": "SetBooleanObjectVariable"
           },
           "parameters": [
-            "Enemy1",
+            "Enemy",
             "isPaused",
             "False",
             ""
@@ -1906,7 +2601,7 @@
             "value": "Tween::ResumeTween"
           },
           "parameters": [
-            "Enemy1",
+            "Enemy",
             "Tween",
             "\"MoveCloser\""
           ]
@@ -1977,7 +2672,7 @@
                 "value": "SourisSurObjet"
               },
               "parameters": [
-                "Enemy1",
+                "Enemy",
                 "",
                 "",
                 ""
@@ -1987,11 +2682,42 @@
           "actions": [
             {
               "type": {
-                "value": "Delete"
+                "value": "SetNumberObjectVariable"
               },
               "parameters": [
-                "Enemy1",
-                ""
+                "Enemy",
+                "NumberofHit",
+                "-",
+                "1"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "NumberofHit",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    ""
+                  ]
+                }
               ]
             }
           ]
@@ -2039,6 +2765,182 @@
             "Ammo",
             "=",
             "Gun.MaxAmmo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Game Timer"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "GameTimer",
+            "\"GameTimer\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+          },
+          "parameters": [
+            "GameTimer",
+            "Text",
+            "=",
+            "\"Time Remaining : \" + ToString(floor(TimerElapsedTime(\"GameTimer\")))"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"GameTimer\"",
+            ">=",
+            "MaxTime"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ChangeTimeScale"
+          },
+          "parameters": [
+            "",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Win and lose conditions"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "TiledUnitsBar::TiledUnitsBar::IsEmpty"
+          },
+          "parameters": [
+            "FlatHeartBar",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanVariable"
+          },
+          "parameters": [
+            "gameResult",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Scene"
+          },
+          "parameters": [
+            "",
+            "\"End Scene\"",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": true,
+            "value": "TiledUnitsBar::TiledUnitsBar::IsEmpty"
+          },
+          "parameters": [
+            "FlatHeartBar",
+            ">="
+          ]
+        },
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"GameTimer\"",
+            ">=",
+            "MaxTime"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanVariable"
+          },
+          "parameters": [
+            "gameResult",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Scene"
+          },
+          "parameters": [
+            "",
+            "\"End Scene\"",
+            ""
           ]
         }
       ]
