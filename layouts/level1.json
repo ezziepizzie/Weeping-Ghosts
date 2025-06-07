@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.2291680161074881,
+    "zoomFactor": 0.2616774116992158,
     "windowMask": false
   },
   "objectsGroups": [
@@ -54,22 +54,6 @@
       "x": 900,
       "y": 506,
       "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Background",
-      "persistentUuid": "219c8187-b8af-48eb-8a6d-727b1270ad4c",
-      "width": 0,
-      "x": 0,
-      "y": 0,
-      "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -348,23 +332,7 @@
       "name": "Background",
       "persistentUuid": "593fd9a8-81cb-4520-b0e1-09d92ab86980",
       "width": 0,
-      "x": -255,
-      "y": 0,
-      "zOrder": 3,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Background",
-      "persistentUuid": "702c104a-7f1e-4d64-b793-91a341dc8f14",
-      "width": 0,
-      "x": 1920,
+      "x": 0,
       "y": 0,
       "zOrder": 3,
       "numberProperties": [],
@@ -403,6 +371,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Background2",
+      "persistentUuid": "ac2ab8a3-bf0c-4f04-b07a-adcc28a94051",
+      "width": 0,
+      "x": 1920,
+      "y": 0,
+      "zOrder": 12,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -430,7 +414,7 @@
       "assetStoreId": "",
       "height": 1080,
       "name": "Background",
-      "texture": "Assets\\bg_wood.png",
+      "texture": "Assets\\WeepingAsset\\WeepingGrave.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 1920,
       "variables": [],
@@ -494,6 +478,7 @@
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "Enemy1",
+      "preScale": 0.2,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -541,7 +526,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Assets\\duck_yellow.png",
+                  "image": "Assets\\WeepingAsset\\Ghost1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1055,6 +1040,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Enemy2",
+      "preScale": 0.2,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -1093,7 +1079,7 @@
       ],
       "animations": [
         {
-          "name": "Assets\\duck_yellow",
+          "name": "HelmetOn",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1103,7 +1089,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Assets\\duck_yellow_red_eye.png",
+                  "image": "Assets\\WeepingAsset\\Ghost3Helmet.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1119,20 +1105,68 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
+                        "x": 78,
                         "y": 0
                       },
                       {
-                        "x": 99,
+                        "x": 1002,
                         "y": 0
                       },
                       {
-                        "x": 99,
-                        "y": 95
+                        "x": 1002,
+                        "y": 1048
                       },
                       {
-                        "x": 0,
-                        "y": 95
+                        "x": 78,
+                        "y": 1048
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HelmetOff",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\WeepingAsset\\Ghost3HelmetOff.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 78,
+                        "y": 0
+                      },
+                      {
+                        "x": 1002,
+                        "y": 0
+                      },
+                      {
+                        "x": 1002,
+                        "y": 1048
+                      },
+                      {
+                        "x": 78,
+                        "y": 1048
                       }
                     ]
                   ]
@@ -1142,6 +1176,17 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 1080,
+      "name": "Background2",
+      "texture": "Assets\\WeepingAsset\\WeepingGrave2.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 1920,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -1152,6 +1197,9 @@
       },
       {
         "objectName": "Background"
+      },
+      {
+        "objectName": "Background2"
       },
       {
         "objectName": "AmmoCount"
@@ -1269,6 +1317,18 @@
             "",
             "\"EnemySpawner\""
           ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\scary-music-box-for-spooky-scenes-165983.mp3",
+            "yes",
+            "50",
+            ""
+          ]
         }
       ]
     },
@@ -1311,23 +1371,12 @@
       "actions": [
         {
           "type": {
-            "value": "Create"
+            "value": "CreateByName"
           },
           "parameters": [
             "",
-            "Enemy1",
-            "EnemySpawner.X()",
-            "EnemySpawner.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "Enemy2",
+            "Enemy",
+            "\"Enemy\" + ToString(RandomInRange(1,2))",
             "EnemySpawner.X()",
             "EnemySpawner.Y()",
             ""
@@ -1369,7 +1418,7 @@
                 "\"MoveCloser\"",
                 "3",
                 "\"linear\"",
-                "8",
+                "12",
                 "",
                 "yes"
               ]
@@ -1555,6 +1604,18 @@
           "parameters": [
             "Enemy",
             "\"AttackCooldown\""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\light-switch-156813.mp3",
+            "",
+            "",
+            ""
           ]
         }
       ]
@@ -1817,6 +1878,18 @@
             "-",
             "1"
           ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\9mm-pistol-shoot-short-reverb-7152.mp3",
+            "",
+            "",
+            ""
+          ]
         }
       ],
       "events": [
@@ -1877,6 +1950,36 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Enemy2",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Sound\\metal-hit-sound-effect-241374.mp3",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1921,6 +2024,18 @@
             "Ammo",
             "=",
             "Gun.MaxAmmo"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\load-gun-sound-effect-5-11003.mp3",
+            "",
+            "100",
+            ""
           ]
         }
       ]
@@ -1973,7 +2088,7 @@
             "GameTimer",
             "Text",
             "=",
-            "\"Time Remaining : \" + ToString(floor(TimerElapsedTime(\"GameTimer\")))"
+            "\"Time Remaining : \" + ToString(MaxTime -floor(TimerElapsedTime(\"GameTimer\")))"
           ]
         }
       ]
@@ -2097,6 +2212,47 @@
             "",
             "\"End Scene\"",
             ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Change Enemy2 sprite"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Enemy2",
+            "NumberofHit",
+            "=",
+            "1"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Enemy2",
+            "Animation",
+            "=",
+            "\"HelmetOff\""
           ]
         }
       ]

@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.2368956372544661,
+    "zoomFactor": 0.2796226521839384,
     "windowMask": false
   },
   "objectsGroups": [
@@ -60,38 +60,6 @@
       "x": 900,
       "y": 506,
       "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Background",
-      "persistentUuid": "219c8187-b8af-48eb-8a6d-727b1270ad4c",
-      "width": 0,
-      "x": 1920,
-      "y": 0,
-      "zOrder": 2,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Background",
-      "persistentUuid": "32d651d7-adf6-4ea2-97b2-4c8cf9df8f30",
-      "width": 0,
-      "x": 0,
-      "y": 0,
-      "zOrder": 3,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -528,23 +496,7 @@
       "name": "Background",
       "persistentUuid": "5175b94e-55e0-4d9a-9bfc-2bdd58fe0256",
       "width": 0,
-      "x": -255,
-      "y": 0,
-      "zOrder": 3,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Background",
-      "persistentUuid": "25255da4-a7fa-4d5c-ad3e-c408bf803adc",
-      "width": 0,
-      "x": 3455,
+      "x": 0,
       "y": 0,
       "zOrder": 3,
       "numberProperties": [],
@@ -599,6 +551,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Background2",
+      "persistentUuid": "12593eaa-8331-4459-bd85-3796295ee60f",
+      "width": 0,
+      "x": 1920,
+      "y": 0,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -626,7 +594,7 @@
       "assetStoreId": "",
       "height": 1080,
       "name": "Background",
-      "texture": "Assets\\bg_wood.png",
+      "texture": "Assets\\WeepingAsset\\WeepingGrave.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 1920,
       "variables": [],
@@ -690,6 +658,7 @@
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "Enemy1",
+      "preScale": 0.2,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -747,7 +716,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Assets\\duck_yellow.png",
+                  "image": "Assets\\WeepingAsset\\Ghost1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1283,6 +1252,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Enemy2",
+      "preScale": 0.2,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -1331,7 +1301,7 @@
       ],
       "animations": [
         {
-          "name": "Assets\\duck_yellow",
+          "name": "HelmetOn",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1341,7 +1311,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Assets\\duck_yellow_red_eye.png",
+                  "image": "Assets\\WeepingAsset\\Ghost3Helmet.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1357,20 +1327,68 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
+                        "x": 78,
                         "y": 0
                       },
                       {
-                        "x": 99,
+                        "x": 1002,
                         "y": 0
                       },
                       {
-                        "x": 99,
-                        "y": 95
+                        "x": 1002,
+                        "y": 1048
                       },
                       {
-                        "x": 0,
-                        "y": 95
+                        "x": 78,
+                        "y": 1048
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HelmetOff",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\WeepingAsset\\Ghost3HelmetOff.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 78,
+                        "y": 0
+                      },
+                      {
+                        "x": 1002,
+                        "y": 0
+                      },
+                      {
+                        "x": 1002,
+                        "y": 1048
+                      },
+                      {
+                        "x": 78,
+                        "y": 1048
                       }
                     ]
                   ]
@@ -1385,6 +1403,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Enemy3",
+      "preScale": 0.2,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -1437,13 +1456,13 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
+              "looping": true,
               "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Assets\\duck_yellow_fast.png",
+                  "image": "Assets\\WeepingAsset\\Ghost4_Idle.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1459,20 +1478,272 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 2,
+                        "y": 171
                       },
                       {
-                        "x": 99,
-                        "y": 0
+                        "x": 1918,
+                        "y": 171
                       },
                       {
-                        "x": 99,
-                        "y": 95
+                        "x": 1918,
+                        "y": 954
                       },
                       {
-                        "x": 0,
-                        "y": 95
+                        "x": 2,
+                        "y": 954
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\WeepingAsset\\Ghost4Back.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 171
+                      },
+                      {
+                        "x": 1918,
+                        "y": 171
+                      },
+                      {
+                        "x": 1918,
+                        "y": 954
+                      },
+                      {
+                        "x": 2,
+                        "y": 954
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\WeepingAsset\\Ghost4Back2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 171
+                      },
+                      {
+                        "x": 1918,
+                        "y": 171
+                      },
+                      {
+                        "x": 1918,
+                        "y": 954
+                      },
+                      {
+                        "x": 2,
+                        "y": 954
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\WeepingAsset\\Ghost4Back.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 171
+                      },
+                      {
+                        "x": 1918,
+                        "y": 171
+                      },
+                      {
+                        "x": 1918,
+                        "y": 954
+                      },
+                      {
+                        "x": 2,
+                        "y": 954
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\WeepingAsset\\Ghost4_Idle.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 171
+                      },
+                      {
+                        "x": 1918,
+                        "y": 171
+                      },
+                      {
+                        "x": 1918,
+                        "y": 954
+                      },
+                      {
+                        "x": 2,
+                        "y": 954
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\WeepingAsset\\Ghost4Front.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 171
+                      },
+                      {
+                        "x": 1918,
+                        "y": 171
+                      },
+                      {
+                        "x": 1918,
+                        "y": 954
+                      },
+                      {
+                        "x": 2,
+                        "y": 954
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\WeepingAsset\\Ghost4Front2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 171
+                      },
+                      {
+                        "x": 1918,
+                        "y": 171
+                      },
+                      {
+                        "x": 1918,
+                        "y": 954
+                      },
+                      {
+                        "x": 2,
+                        "y": 954
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\WeepingAsset\\Ghost4Front.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 171
+                      },
+                      {
+                        "x": 1918,
+                        "y": 171
+                      },
+                      {
+                        "x": 1918,
+                        "y": 954
+                      },
+                      {
+                        "x": 2,
+                        "y": 954
                       }
                     ]
                   ]
@@ -1487,6 +1758,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Enemy4",
+      "preScale": 0.2,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -1524,6 +1796,11 @@
           "name": "MovementSpeed",
           "type": "number",
           "value": 50
+        },
+        {
+          "name": "LightOn",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -1535,7 +1812,7 @@
       ],
       "animations": [
         {
-          "name": "Assets\\duck_yellow",
+          "name": "Idle",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1545,7 +1822,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Assets\\duck_yellow2",
+                  "image": "Assets\\WeepingAsset\\Ghost2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1561,20 +1838,116 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 170,
+                        "y": 5
                       },
                       {
-                        "x": 99,
-                        "y": 0
+                        "x": 879,
+                        "y": 5
                       },
                       {
-                        "x": 99,
-                        "y": 95
+                        "x": 879,
+                        "y": 1072
                       },
                       {
-                        "x": 0,
-                        "y": 95
+                        "x": 170,
+                        "y": 1072
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Center",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\WeepingAsset\\Ghost2CloseUmb.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 170,
+                        "y": 5
+                      },
+                      {
+                        "x": 879,
+                        "y": 5
+                      },
+                      {
+                        "x": 879,
+                        "y": 1072
+                      },
+                      {
+                        "x": 170,
+                        "y": 1072
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Open",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\WeepingAsset\\Ghost2OpenUmb.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 170,
+                        "y": 5
+                      },
+                      {
+                        "x": 879,
+                        "y": 5
+                      },
+                      {
+                        "x": 879,
+                        "y": 1072
+                      },
+                      {
+                        "x": 170,
+                        "y": 1072
                       }
                     ]
                   ]
@@ -1584,6 +1957,17 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 1080,
+      "name": "Background2",
+      "texture": "Assets\\WeepingAsset\\WeepingGrave2.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 1920,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -1594,6 +1978,9 @@
       },
       {
         "objectName": "Background"
+      },
+      {
+        "objectName": "Background2"
       },
       {
         "objectName": "AmmoCount"
@@ -1732,6 +2119,18 @@
             "",
             "\"EnemySpawnerBack\""
           ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\scary-music-box-for-spooky-scenes-165983.mp3",
+            "yes",
+            "50",
+            ""
+          ]
         }
       ]
     },
@@ -1774,47 +2173,12 @@
       "actions": [
         {
           "type": {
-            "value": "Create"
+            "value": "CreateByName"
           },
           "parameters": [
             "",
-            "Enemy1",
-            "EnemySpawnerFront.X()",
-            "EnemySpawnerFront.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "Enemy2",
-            "EnemySpawnerFront.X()",
-            "EnemySpawnerFront.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "Enemy3",
-            "EnemySpawnerFront.X()",
-            "EnemySpawnerFront.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "Enemy4",
+            "Enemy",
+            "\"Enemy\" + ToString(RandomInRange(1,4))",
             "EnemySpawnerFront.X()",
             "EnemySpawnerFront.Y()",
             ""
@@ -1856,7 +2220,7 @@
                 "\"MoveCloser\"",
                 "3",
                 "\"linear\"",
-                "8",
+                "12",
                 "",
                 "yes"
               ]
@@ -1994,47 +2358,12 @@
       "actions": [
         {
           "type": {
-            "value": "Create"
+            "value": "CreateByName"
           },
           "parameters": [
             "",
-            "Enemy1",
-            "EnemySpawnerBack.X()",
-            "EnemySpawnerBack.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "Enemy2",
-            "EnemySpawnerBack.X()",
-            "EnemySpawnerBack.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "Enemy3",
-            "EnemySpawnerBack.X()",
-            "EnemySpawnerBack.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "Enemy4",
+            "Enemy",
+            "\"Enemy\" + ToString(RandomInRange(1,4))",
             "EnemySpawnerBack.X()",
             "EnemySpawnerBack.Y()",
             ""
@@ -2076,7 +2405,7 @@
                 "\"MoveCloser\"",
                 "3",
                 "\"linear\"",
-                "8",
+                "12",
                 "",
                 "yes"
               ]
@@ -2111,7 +2440,7 @@
                 "Enemy",
                 "Enemy.TargetXPosition",
                 "Enemy.TargetYPosition",
-                "50",
+                "Enemy.MovementSpeed",
                 "1"
               ]
             }
@@ -2242,6 +2571,18 @@
             "Flashlight",
             "\"FlashlightTurnOff\""
           ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\light-switch-156813.mp3",
+            "",
+            "",
+            ""
+          ]
         }
       ]
     },
@@ -2359,6 +2700,12 @@
             "",
             "\"q\""
           ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
         }
       ],
       "actions": [
@@ -2370,6 +2717,18 @@
             "isLookingFront",
             "True",
             ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\DirtWalk_V2.mp3",
+            "",
+            "60",
+            "1"
           ]
         }
       ]
@@ -2385,6 +2744,12 @@
             "",
             "\"e\""
           ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
         }
       ],
       "actions": [
@@ -2396,6 +2761,18 @@
             "isLookingFront",
             "False",
             ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\DirtWalk_V2.mp3",
+            "",
+            "60",
+            "1"
           ]
         }
       ]
@@ -2581,7 +2958,7 @@
             "Enemy",
             "Enemy.TargetXPosition",
             "Enemy.TargetYPosition",
-            "50",
+            "Enemy.MovementSpeed",
             "1"
           ]
         },
@@ -2661,6 +3038,18 @@
             "-",
             "1"
           ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\9mm-pistol-shoot-short-reverb-7152.mp3",
+            "",
+            "",
+            ""
+          ]
         }
       ],
       "events": [
@@ -2721,6 +3110,36 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Enemy2",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Sound\\metal-hit-sound-effect-241374.mp3",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
         }
       ]
     },
@@ -2765,6 +3184,18 @@
             "Ammo",
             "=",
             "Gun.MaxAmmo"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\load-gun-sound-effect-5-11003.mp3",
+            "",
+            "100",
+            ""
           ]
         }
       ]
@@ -2817,7 +3248,7 @@
             "GameTimer",
             "Text",
             "=",
-            "\"Time Remaining : \" + ToString(floor(TimerElapsedTime(\"GameTimer\")))"
+            "\"Time Remaining : \" + ToString(MaxTime -floor(TimerElapsedTime(\"GameTimer\")))"
           ]
         }
       ]
@@ -2941,6 +3372,180 @@
             "",
             "\"End Scene\"",
             ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Change Enemy2 sprite"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Enemy2",
+            "NumberofHit",
+            "=",
+            "1"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Enemy2",
+            "Animation",
+            "=",
+            "\"HelmetOff\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Enemy4 Umbrella Animation"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "FlashlightRadius",
+            "Enemy4",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "Enemy4",
+            "LightOn",
+            "False",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Enemy4",
+            "LightOn",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Wait"
+          },
+          "parameters": [
+            "0.1"
+          ]
+        },
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Enemy4",
+            "Animation",
+            "=",
+            "\"Center\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Wait"
+          },
+          "parameters": [
+            "0.3"
+          ]
+        },
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Enemy4",
+            "Animation",
+            "=",
+            "\"Open\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": true,
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "FlashlightRadius",
+            "Enemy4",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Enemy4",
+            "LightOn",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Enemy4",
+            "Animation",
+            "=",
+            "\"Idle\""
           ]
         }
       ]

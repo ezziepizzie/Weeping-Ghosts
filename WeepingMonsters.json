@@ -234,6 +234,190 @@
         "name": "Assets\\duck_yellow2",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/WeepingGrave.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\WeepingGrave.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/WeepingGrave2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\WeepingGrave2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/Ghost1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Ghost1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/Ghost3Helmet.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Ghost3Helmet.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/Ghost3HelmetOff.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Ghost3HelmetOff.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/Ghost2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Ghost2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/Ghost2CloseUmb.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Ghost2CloseUmb.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/Ghost2OpenUmb.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Ghost2OpenUmb.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/Ghost4_Idle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Ghost4_Idle.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/Ghost4Back.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Ghost4Back.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/Ghost4Back2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Ghost4Back2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/Ghost4Front.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Ghost4Front.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/Ghost4Front2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Ghost4Front2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/load-gun-sound-effect-5-11003.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\load-gun-sound-effect-5-11003.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/9mm-pistol-shoot-short-reverb-7152.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\9mm-pistol-shoot-short-reverb-7152.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/scary-music-box-for-spooky-scenes-165983.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\scary-music-box-for-spooky-scenes-165983.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/light-switch-156813.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\light-switch-156813.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/DirtWalk.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\DirtWalk.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/DirtWalk.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\DirtWalk.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/DirtWalk_V2.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\DirtWalk_V2.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/metal-hit-sound-effect-241374.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\metal-hit-sound-effect-241374.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -333,8 +517,8 @@
   "variables": [
     {
       "name": "SpawnRate",
-      "type": "string",
-      "value": "3"
+      "type": "number",
+      "value": 1.5
     },
     {
       "name": "MaxTime",
