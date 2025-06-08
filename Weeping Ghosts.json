@@ -14,12 +14,12 @@
     "orientation": "default",
     "packageName": "com.example.gamename",
     "pixelsRounding": false,
-    "projectUuid": "0980e292-a290-4f68-b3e5-44cb857c82c7",
+    "projectUuid": "71c7c13b-fc49-4615-b98f-c722c369c99e",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
     "version": "1.0.0",
-    "name": "WeepingMonsters",
+    "name": "Weeping Ghosts",
     "description": "",
     "author": "",
     "windowWidth": 3840,
@@ -518,7 +518,7 @@
     {
       "name": "SpawnRate",
       "type": "number",
-      "value": 1.5
+      "value": 3
     },
     {
       "name": "MaxTime",
