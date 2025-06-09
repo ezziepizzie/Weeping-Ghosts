@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.36458333333333476,
+    "zoomFactor": 0.37687720367508865,
     "windowMask": false
   },
   "objectsGroups": [
@@ -1697,6 +1697,24 @@
             "=",
             "Gun.Ammo"
           ]
+        },
+        {
+          "type": {
+            "value": "CacheSouris"
+          },
+          "parameters": [
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "LevelNum",
+            "=",
+            "1"
+          ]
         }
       ]
     },
@@ -2550,6 +2568,16 @@
         },
         {
           "type": {
+            "value": "SetStringVariable"
+          },
+          "parameters": [
+            "GameSceneName",
+            "=",
+            "\"Level\" + LevelNum"
+          ]
+        },
+        {
+          "type": {
             "value": "Scene"
           },
           "parameters": [
@@ -2594,6 +2622,16 @@
             "gameResult",
             "True",
             ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetStringVariable"
+          },
+          "parameters": [
+            "GameSceneName",
+            "=",
+            "\"Level\" + LevelNum"
           ]
         },
         {
