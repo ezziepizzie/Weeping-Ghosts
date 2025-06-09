@@ -418,6 +418,13 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/who asks satan.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\who asks satan.ttf",
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -547,6 +554,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/end-scene"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/main-menu"
     }
   ],
   "externalEvents": [],

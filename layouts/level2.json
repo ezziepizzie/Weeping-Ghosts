@@ -584,7 +584,7 @@
       "effects": [],
       "behaviors": [],
       "content": {
-        "radius": 400,
+        "radius": 550,
         "color": "240;240;163",
         "debugMode": false,
         "texture": ""
@@ -4570,15 +4570,6 @@
         },
         {
           "type": {
-            "value": "ResetObjectTimer"
-          },
-          "parameters": [
-            "Enemy",
-            "\"AttackCooldown\""
-          ]
-        },
-        {
-          "type": {
             "value": "PlaySound"
           },
           "parameters": [
@@ -4764,15 +4755,6 @@
             "True",
             ""
           ]
-        },
-        {
-          "type": {
-            "value": "ResetObjectTimer"
-          },
-          "parameters": [
-            "Enemy",
-            "\"AttackCooldown\""
-          ]
         }
       ]
     },
@@ -4949,15 +4931,6 @@
             "True",
             ""
           ]
-        },
-        {
-          "type": {
-            "value": "ResetObjectTimer"
-          },
-          "parameters": [
-            "Enemy",
-            "\"AttackCooldown\""
-          ]
         }
       ]
     },
@@ -5069,17 +5042,6 @@
             "True",
             ""
           ]
-        },
-        {
-          "type": {
-            "value": "CompareObjectTimer"
-          },
-          "parameters": [
-            "Enemy",
-            "\"AttackCooldown\"",
-            ">",
-            "3.5"
-          ]
         }
       ],
       "actions": [
@@ -5121,15 +5083,6 @@
             "FlashlightisOn",
             "False",
             ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ResetObjectTimer"
-          },
-          "parameters": [
-            "Enemy",
-            "\"AttackCooldown\""
           ]
         },
         {
@@ -5356,6 +5309,14 @@
         }
       ],
       "actions": [
+        {
+          "type": {
+            "value": "Wait"
+          },
+          "parameters": [
+            "0.25"
+          ]
+        },
         {
           "type": {
             "value": "Arreter"
