@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.461373268210228,
+    "zoomFactor": 0.3657893231876507,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -30,7 +30,7 @@
       "height": 0,
       "keepRatio": true,
       "layer": "",
-      "name": "NewTiledSprite",
+      "name": "Background",
       "persistentUuid": "2440dd53-4f20-4d41-8784-ea21d1b51352",
       "width": 0,
       "x": 0,
@@ -42,16 +42,50 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "depth": 48,
+      "height": 114,
       "keepRatio": true,
       "layer": "",
-      "name": "Title",
-      "persistentUuid": "ccf0684d-2fdb-4e67-9aea-361c9bb7022d",
-      "width": 0,
-      "x": 361,
-      "y": 434,
-      "zOrder": 2,
+      "name": "StartButton",
+      "persistentUuid": "ac68881d-5538-4863-834f-c6e9b41c4246",
+      "width": 239,
+      "x": 832,
+      "y": 620,
+      "zOrder": 3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 48,
+      "height": 117,
+      "keepRatio": true,
+      "layer": "",
+      "name": "HowToPlayButton",
+      "persistentUuid": "65fb3f45-27e8-4029-b0bc-5d5e01b5b48a",
+      "width": 285,
+      "x": 808,
+      "y": 751,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 50.986666666666665,
+      "height": 114,
+      "layer": "",
+      "name": "QuitButton",
+      "persistentUuid": "6a59b900-6bd5-42cb-8fc9-3536b3b22176",
+      "width": 239,
+      "x": 832,
+      "y": 890,
+      "zOrder": 5,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -61,8 +95,8 @@
     {
       "assetStoreId": "",
       "height": 1080,
-      "name": "NewTiledSprite",
-      "texture": "Assets\\WeepingAsset\\WeepingGrave.png",
+      "name": "Background",
+      "texture": "Assets\\WeepingAsset\\MainMenu.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 1920,
       "variables": [],
@@ -85,9 +119,9 @@
       "textAlignment": "center",
       "characterSize": 256,
       "color": {
-        "b": 33,
-        "g": 33,
-        "r": 211
+        "b": 255,
+        "g": 255,
+        "r": 255
       },
       "content": {
         "bold": false,
@@ -108,7 +142,360 @@
         "textAlignment": "center",
         "verticalTextAlignment": "top",
         "characterSize": 256,
-        "color": "211;33;33"
+        "color": "255;255;255"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "StartButton",
+      "type": "PanelSpriteButton::PanelSpriteButton",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "TopPadding": 32,
+        "BottomPadding": 32,
+        "LeftPadding": 16,
+        "RightPadding": 16
+      },
+      "childrenContent": {
+        "Hovered": {
+          "bottomMargin": 16,
+          "height": 32,
+          "leftMargin": 6,
+          "rightMargin": 6,
+          "texture": "Assets\\Red Button With Shadow_Hovered.png",
+          "tiled": false,
+          "topMargin": 16,
+          "width": 32
+        },
+        "Idle": {
+          "bottomMargin": 16,
+          "height": 32,
+          "leftMargin": 16,
+          "rightMargin": 16,
+          "texture": "Assets\\Red Button With Shadow_Idle.png",
+          "tiled": false,
+          "topMargin": 16,
+          "width": 32
+        },
+        "Label": {
+          "bold": false,
+          "italic": false,
+          "smoothed": true,
+          "underlined": false,
+          "string": "Start",
+          "font": "Assets\\WeepingAsset\\who asks satan.ttf",
+          "textAlignment": "center",
+          "characterSize": 60,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Start",
+            "font": "Assets\\WeepingAsset\\who asks satan.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 60,
+            "color": "255;255;255"
+          }
+        },
+        "Pressed": {
+          "bottomMargin": 16,
+          "height": 32,
+          "leftMargin": 16,
+          "rightMargin": 16,
+          "texture": "Assets\\Red Button With Shadow_Pressed.png",
+          "tiled": false,
+          "topMargin": 16,
+          "width": 32
+        }
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "HowToPlayButton",
+      "type": "PanelSpriteButton::PanelSpriteButton",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "TopPadding": 32,
+        "BottomPadding": 32,
+        "LeftPadding": 16,
+        "RightPadding": 16
+      },
+      "childrenContent": {
+        "Hovered": {
+          "bottomMargin": 16,
+          "height": 32,
+          "leftMargin": 6,
+          "rightMargin": 6,
+          "texture": "Assets\\Red Button With Shadow_Hovered.png",
+          "tiled": false,
+          "topMargin": 16,
+          "width": 32
+        },
+        "Idle": {
+          "bottomMargin": 16,
+          "height": 32,
+          "leftMargin": 16,
+          "rightMargin": 16,
+          "texture": "Assets\\Red Button With Shadow_Idle.png",
+          "tiled": false,
+          "topMargin": 16,
+          "width": 32
+        },
+        "Label": {
+          "bold": false,
+          "italic": false,
+          "smoothed": true,
+          "underlined": false,
+          "string": "How to Play",
+          "font": "Assets\\WeepingAsset\\who asks satan.ttf",
+          "textAlignment": "center",
+          "characterSize": 60,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "How to Play",
+            "font": "Assets\\WeepingAsset\\who asks satan.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 60,
+            "color": "255;255;255"
+          }
+        },
+        "Pressed": {
+          "bottomMargin": 16,
+          "height": 32,
+          "leftMargin": 16,
+          "rightMargin": 16,
+          "texture": "Assets\\Red Button With Shadow_Pressed.png",
+          "tiled": false,
+          "topMargin": 16,
+          "width": 32
+        }
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "QuitButton",
+      "type": "PanelSpriteButton::PanelSpriteButton",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "TopPadding": 32,
+        "BottomPadding": 32,
+        "LeftPadding": 16,
+        "RightPadding": 16
+      },
+      "childrenContent": {
+        "Hovered": {
+          "bottomMargin": 16,
+          "height": 32,
+          "leftMargin": 6,
+          "rightMargin": 6,
+          "texture": "Assets\\Red Button With Shadow_Hovered.png",
+          "tiled": false,
+          "topMargin": 16,
+          "width": 32
+        },
+        "Idle": {
+          "bottomMargin": 16,
+          "height": 32,
+          "leftMargin": 16,
+          "rightMargin": 16,
+          "texture": "Assets\\Red Button With Shadow_Idle.png",
+          "tiled": false,
+          "topMargin": 16,
+          "width": 32
+        },
+        "Label": {
+          "bold": false,
+          "italic": false,
+          "smoothed": true,
+          "underlined": false,
+          "string": "Quit",
+          "font": "Assets\\WeepingAsset\\who asks satan.ttf",
+          "textAlignment": "center",
+          "characterSize": 60,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Quit",
+            "font": "Assets\\WeepingAsset\\who asks satan.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 60,
+            "color": "255;255;255"
+          }
+        },
+        "Pressed": {
+          "bottomMargin": 16,
+          "height": 32,
+          "leftMargin": 16,
+          "rightMargin": 16,
+          "texture": "Assets\\Red Button With Shadow_Pressed.png",
+          "tiled": false,
+          "topMargin": 16,
+          "width": 32
+        }
+      }
+    },
+    {
+      "assetStoreId": "",
+      "height": 1080,
+      "name": "HowToPlay",
+      "texture": "Assets\\WeepingAsset\\HowToPlay.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 1920,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "BackButton",
+      "type": "PanelSpriteButton::PanelSpriteButton",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "content": {
+        "TopPadding": 32,
+        "BottomPadding": 32,
+        "LeftPadding": 16,
+        "RightPadding": 16
+      },
+      "childrenContent": {
+        "Hovered": {
+          "bottomMargin": 16,
+          "height": 32,
+          "leftMargin": 6,
+          "rightMargin": 6,
+          "texture": "Assets\\Red Button With Shadow_Hovered.png",
+          "tiled": false,
+          "topMargin": 16,
+          "width": 32
+        },
+        "Idle": {
+          "bottomMargin": 16,
+          "height": 32,
+          "leftMargin": 16,
+          "rightMargin": 16,
+          "texture": "Assets\\Red Button With Shadow_Idle.png",
+          "tiled": false,
+          "topMargin": 16,
+          "width": 32
+        },
+        "Label": {
+          "bold": false,
+          "italic": false,
+          "smoothed": true,
+          "underlined": false,
+          "string": "Back",
+          "font": "Assets\\WeepingAsset\\who asks satan.ttf",
+          "textAlignment": "center",
+          "characterSize": 60,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Back",
+            "font": "Assets\\WeepingAsset\\who asks satan.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 60,
+            "color": "255;255;255"
+          }
+        },
+        "Pressed": {
+          "bottomMargin": 16,
+          "height": 32,
+          "leftMargin": 16,
+          "rightMargin": 16,
+          "texture": "Assets\\Red Button With Shadow_Pressed.png",
+          "tiled": false,
+          "topMargin": 16,
+          "width": 32
+        }
       }
     }
   ],
@@ -116,14 +503,307 @@
     "folderName": "__ROOT",
     "children": [
       {
-        "objectName": "NewTiledSprite"
+        "objectName": "Background"
       },
       {
         "objectName": "Title"
+      },
+      {
+        "objectName": "StartButton"
+      },
+      {
+        "objectName": "HowToPlayButton"
+      },
+      {
+        "objectName": "QuitButton"
+      },
+      {
+        "objectName": "BackButton"
+      },
+      {
+        "objectName": "HowToPlay"
       }
     ]
   },
-  "events": [],
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "CentreCamera"
+          },
+          "parameters": [
+            "",
+            "Background",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\mixkit-night-crickets-near-the-swamp-1782.wav",
+            "yes",
+            "",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+          },
+          "parameters": [
+            "StartButton",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\ButtonClick2.mp3",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Wait"
+          },
+          "parameters": [
+            ".5"
+          ]
+        },
+        {
+          "type": {
+            "value": "Scene"
+          },
+          "parameters": [
+            "",
+            "\"Level Select\"",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+          },
+          "parameters": [
+            "HowToPlayButton",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\ButtonClick2.mp3",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Wait"
+          },
+          "parameters": [
+            ".5"
+          ]
+        },
+        {
+          "type": {
+            "value": "Scene"
+          },
+          "parameters": [
+            "",
+            "\"How to Play\"",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+          },
+          "parameters": [
+            "QuitButton",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\ButtonClick2.mp3",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Wait"
+          },
+          "parameters": [
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Quit"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PanelSpriteButton::PanelSpriteButton::IsHovered"
+          },
+          "parameters": [
+            "StartButton",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\tunetank.com_menu-interface-selection.wav",
+            "",
+            "50",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PanelSpriteButton::PanelSpriteButton::IsHovered"
+          },
+          "parameters": [
+            "HowToPlayButton",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\tunetank.com_menu-interface-selection.wav",
+            "",
+            "50",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PanelSpriteButton::PanelSpriteButton::IsHovered"
+          },
+          "parameters": [
+            "QuitButton",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\tunetank.com_menu-interface-selection.wav",
+            "",
+            "50",
+            ""
+          ]
+        }
+      ]
+    }
+  ],
   "layers": [
     {
       "ambientLightColorB": 200,
@@ -194,6 +874,10 @@
     {
       "name": "Text",
       "type": "TextContainerCapability::TextContainerBehavior"
+    },
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
     }
   ]
 }

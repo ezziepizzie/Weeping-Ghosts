@@ -1,5 +1,5 @@
 {
-  "firstLayout": "",
+  "firstLayout": "Main Menu",
   "gdVersion": {
     "build": 231,
     "major": 5,
@@ -611,6 +611,118 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/jumpscare.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\jumpscare.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/Jumpscare.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\Jumpscare.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Red Button With Shadow_Idle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Red Button With Shadow_Idle.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Red Button With Shadow_Hovered.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Red Button With Shadow_Hovered.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Red Button With Shadow_Pressed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Red Button With Shadow_Pressed.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/MainMenu.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\MainMenu.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/LevelSelect.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\LevelSelect.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/Backstory.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Backstory.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/mixkit-paper-slide-1530.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\mixkit-paper-slide-1530.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/mixkit-night-crickets-near-the-swamp-1782.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\mixkit-night-crickets-near-the-swamp-1782.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/tunetank.com_menu-interface-selection.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\tunetank.com_menu-interface-selection.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/red-bg.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\red-bg.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/HowToPlay.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\HowToPlay.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -693,6 +805,17 @@
         "characterSize": 42,
         "color": "255;255;255"
       }
+    },
+    {
+      "assetStoreId": "",
+      "height": 1080,
+      "name": "DamageIndicator",
+      "texture": "Assets\\WeepingAsset\\red-bg.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 1920,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -703,6 +826,9 @@
       },
       {
         "objectName": "GameTimer"
+      },
+      {
+        "objectName": "DamageIndicator"
       }
     ]
   },
@@ -711,7 +837,7 @@
     {
       "name": "SpawnRate",
       "type": "number",
-      "value": 3
+      "value": 2
     },
     {
       "name": "MaxTime",
@@ -754,6 +880,18 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/main-menu"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/level-select"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/backstory"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/how-to-play"
     }
   ],
   "externalEvents": [],
