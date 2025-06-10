@@ -1,13 +1,13 @@
 {
-  "b": 209,
+  "b": 0,
   "disableInputWhenNotFocused": true,
   "mangledName": "Level2",
   "name": "Level2",
-  "r": 209,
+  "r": 0,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
   "title": "",
-  "v": 209,
+  "v": 0,
   "uiSettings": {
     "grid": false,
     "gridType": "rectangular",
@@ -4600,6 +4600,18 @@
             "Sound\\scary-music-box-for-spooky-scenes-165983.mp3",
             "yes",
             "50",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "CentreCamera"
+          },
+          "parameters": [
+            "",
+            "Background",
+            "",
+            "",
             ""
           ]
         }
