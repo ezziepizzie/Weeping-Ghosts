@@ -255,8 +255,8 @@
       "name": "Gun",
       "persistentUuid": "1ca33d8d-69d0-49b7-a7b0-71a81810937a",
       "width": 0,
-      "x": 786,
-      "y": 306,
+      "x": 1159,
+      "y": 619,
       "zOrder": 6,
       "numberProperties": [],
       "stringProperties": [],
@@ -969,7 +969,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "idle",
+          "name": "",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -978,7 +978,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Assets\\WeepingAsset\\Rifle.png",
+                  "image": "Assets\\rifle.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -994,20 +994,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 313,
-                        "y": 21
+                        "x": 1,
+                        "y": 0
                       },
                       {
-                        "x": 832,
-                        "y": 21
+                        "x": 142,
+                        "y": 0
                       },
                       {
-                        "x": 832,
-                        "y": 1031
+                        "x": 142,
+                        "y": 319
                       },
                       {
-                        "x": 313,
-                        "y": 1031
+                        "x": 1,
+                        "y": 319
                       }
                     ]
                   ]
