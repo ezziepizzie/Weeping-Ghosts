@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.24488383633725563,
+    "zoomFactor": 0.270501260396256,
     "windowMask": false
   },
   "objectsGroups": [
@@ -45,6 +45,11 @@
       "name": "isLookingFront",
       "type": "boolean",
       "value": true
+    },
+    {
+      "name": "Crying",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
@@ -978,7 +983,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Assets\\rifle.png",
+                  "image": "Assets\\WeepingAsset\\Rifle.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -994,20 +999,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 1,
-                        "y": 0
+                        "x": 23,
+                        "y": 6
                       },
                       {
-                        "x": 142,
-                        "y": 0
+                        "x": 176,
+                        "y": 6
                       },
                       {
-                        "x": 142,
-                        "y": 319
+                        "x": 176,
+                        "y": 305
                       },
                       {
-                        "x": 1,
-                        "y": 319
+                        "x": 23,
+                        "y": 305
                       }
                     ]
                   ]
@@ -1038,7 +1043,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Assets\\icon_bullet_gold_short.png",
+                  "image": "Assets\\WeepingAsset\\Bullet.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1054,20 +1059,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 1,
+                        "y": 2
                       },
                       {
-                        "x": 21,
-                        "y": 0
+                        "x": 20,
+                        "y": 2
                       },
                       {
-                        "x": 21,
-                        "y": 35
+                        "x": 20,
+                        "y": 36
                       },
                       {
-                        "x": 0,
-                        "y": 35
+                        "x": 1,
+                        "y": 36
                       }
                     ]
                   ]
@@ -1098,7 +1103,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Assets\\crosshair_outline_small.png",
+                  "image": "Assets\\WeepingAsset\\CrossHair.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1114,20 +1119,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 2,
+                        "y": 4
                       },
                       {
-                        "x": 46,
-                        "y": 0
+                        "x": 43,
+                        "y": 4
                       },
                       {
-                        "x": 46,
-                        "y": 46
+                        "x": 43,
+                        "y": 41
                       },
                       {
-                        "x": 0,
-                        "y": 46
+                        "x": 2,
+                        "y": 41
                       }
                     ]
                   ]
@@ -5105,6 +5110,30 @@
         },
         {
           "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\light-switch-156813.mp3",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\HeartAttackDamage.mp3",
+            "",
+            "200",
+            ""
+          ]
+        },
+        {
+          "type": {
             "value": "Delete"
           },
           "parameters": [
@@ -5551,6 +5580,18 @@
                     "Enemy",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "Sound\\Ghost_scream.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
                 }
               ]
             }
@@ -5584,6 +5625,63 @@
                 ""
               ]
             }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "When ammo is 0, play sound"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "MouseButtonFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"Left\""
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Ammo",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\NoBullets.mp3",
+            "",
+            "",
+            ""
           ]
         }
       ]
@@ -6011,6 +6109,63 @@
             "Animation",
             "=",
             "\"Idle\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Randomly plays crying sound"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "Crying",
+            "=",
+            "RandomInRange(0,1200)"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "Crying",
+            "=",
+            "0"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\CryingGhost.mp3",
+            "",
+            "30",
+            ""
           ]
         }
       ]

@@ -583,6 +583,18 @@
             "GameSceneName",
             ""
           ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\ButtonClick2.mp3",
+            "",
+            "",
+            ""
+          ]
         }
       ]
     },
@@ -629,6 +641,18 @@
             "NextLevelName",
             ""
           ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\ButtonClick2.mp3",
+            "",
+            "",
+            ""
+          ]
         }
       ]
     },
@@ -650,6 +674,30 @@
             "value": "MontreSouris"
           },
           "parameters": [
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\BrokenPianoMenu.wav",
+            "yes",
+            "100",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\Boom.mp3",
+            "",
+            "",
             ""
           ]
         }

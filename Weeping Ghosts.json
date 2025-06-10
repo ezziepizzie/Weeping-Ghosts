@@ -491,6 +491,126 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Particles/PixiJS/04556cffa8fa75a9515382f3ad3d092361a7a339c612344926d372f906e3e7ed_Smoke.png",
           "name": "Smoke.png"
         }
+      },
+      {
+        "file": "Assets/WeepingAsset/Bullet.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Bullet.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/Heartpng.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Heartpng.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/HeartDown.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\HeartDown.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/CrossHair.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\CrossHair.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/Rifle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Rifle.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/HeartAttackDamage.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\HeartAttackDamage.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/Ghost_scream.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\Ghost_scream.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/ButtonClick.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\ButtonClick.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/ButtonClick2.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\ButtonClick2.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/BrokenPianoMenu.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\BrokenPianoMenu.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/CryingGhost.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\CryingGhost.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/Boom.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\Boom.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/NoBullets.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\NoBullets.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -515,19 +635,19 @@
           "height": 90,
           "leftMargin": 0,
           "rightMargin": 0,
-          "texture": "Flat Heart Empty.png",
+          "texture": "Assets\\WeepingAsset\\HeartDown.png",
           "tiled": false,
           "topMargin": 0,
           "width": 270
         },
         "Bar": {
           "height": 90,
-          "texture": "Flat Heart Empty.png",
+          "texture": "Assets\\WeepingAsset\\HeartDown.png",
           "width": 90
         },
         "FillBar": {
           "height": 90,
-          "texture": "Flat Heart Filled.png",
+          "texture": "Assets\\WeepingAsset\\Heartpng.png",
           "width": 90
         }
       }
@@ -544,7 +664,7 @@
       "effects": [],
       "behaviors": [],
       "string": "Time Remaining : ",
-      "font": "",
+      "font": "Assets\\WeepingAsset\\who asks satan.ttf",
       "textAlignment": "left",
       "characterSize": 42,
       "color": {
@@ -567,7 +687,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "Time Remaining : ",
-        "font": "",
+        "font": "Assets\\WeepingAsset\\who asks satan.ttf",
         "textAlignment": "left",
         "verticalTextAlignment": "center",
         "characterSize": 42,
