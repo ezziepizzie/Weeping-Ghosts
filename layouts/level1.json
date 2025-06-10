@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.37687720367508865,
+    "zoomFactor": 0.2291680161074885,
     "windowMask": false
   },
   "objectsGroups": [
@@ -258,22 +258,6 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "UI",
-      "name": "Gun",
-      "persistentUuid": "1ca33d8d-69d0-49b7-a7b0-71a81810937a",
-      "width": 0,
-      "x": 1159,
-      "y": 619,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
       "customSize": true,
       "depth": 0,
       "height": 94.28571428571428,
@@ -384,6 +368,22 @@
       "x": 1920,
       "y": 0,
       "zOrder": 12,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "UI",
+      "name": "Gun",
+      "persistentUuid": "cae63fba-b6c9-4437-b1f5-21a476216b45",
+      "width": 0,
+      "x": 700,
+      "y": 399,
+      "zOrder": 13,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -787,7 +787,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "Idle",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -796,7 +796,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Assets\\rifle.png",
+                  "image": "Assets\\WeepingAsset\\Rifle.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -812,20 +812,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 1,
-                        "y": 0
+                        "x": 313,
+                        "y": 21
                       },
                       {
-                        "x": 142,
-                        "y": 0
+                        "x": 832,
+                        "y": 21
                       },
                       {
-                        "x": 142,
-                        "y": 319
+                        "x": 832,
+                        "y": 1031
                       },
                       {
-                        "x": 1,
-                        "y": 319
+                        "x": 313,
+                        "y": 1031
                       }
                     ]
                   ]
@@ -1750,6 +1750,17 @@
             "yes",
             "50",
             ""
+          ]
+        },
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "Gun",
+            "Animation",
+            "=",
+            "\"Idle\""
           ]
         }
       ]

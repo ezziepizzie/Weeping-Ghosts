@@ -491,6 +491,14 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Particles/PixiJS/04556cffa8fa75a9515382f3ad3d092361a7a339c612344926d372f906e3e7ed_Smoke.png",
           "name": "Smoke.png"
         }
+      },
+      {
+        "file": "Assets/WeepingAsset/Rifle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\Rifle.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
