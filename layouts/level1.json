@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.28905162031349263,
+    "zoomFactor": 0.37687720367508865,
     "windowMask": false
   },
   "objectsGroups": [
@@ -77,7 +77,7 @@
       "name": "AmmoCount",
       "persistentUuid": "4b0b8732-4ac6-496f-ab27-62302257899a",
       "width": 0,
-      "x": 1847,
+      "x": 1794,
       "y": 976,
       "zOrder": 10,
       "numberProperties": [],
@@ -276,7 +276,7 @@
       "name": "Bullet",
       "persistentUuid": "62696d66-a732-4af2-9f20-e519b09148fd",
       "width": 55,
-      "x": 1779,
+      "x": 1728,
       "y": 956,
       "zOrder": 7,
       "numberProperties": [],
@@ -397,6 +397,39 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 450,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AmmoBox",
+      "persistentUuid": "0abb5ea6-5313-465f-9a05-9e43b347b572",
+      "width": 450,
+      "x": 0,
+      "y": 762,
+      "zOrder": 13,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "Text",
+      "name": "MagazineText",
+      "persistentUuid": "31fde33c-90ed-46be-9b30-393ff001678c",
+      "width": 0,
+      "x": 28,
+      "y": 731,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -442,7 +475,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "1",
+      "string": "1 / 24",
       "font": "",
       "textAlignment": "left",
       "characterSize": 50,
@@ -465,7 +498,7 @@
         "shadowOpacity": 127,
         "smoothed": true,
         "underlined": false,
-        "text": "1",
+        "text": "1 / 24",
         "font": "",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
@@ -791,6 +824,21 @@
           "name": "MaxAmmo",
           "type": "number",
           "value": 6
+        },
+        {
+          "name": "Magazine",
+          "type": "number",
+          "value": 24
+        },
+        {
+          "name": "MaxMagazine",
+          "type": "number",
+          "value": 24
+        },
+        {
+          "name": "BulletNeeded",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -1768,7 +1816,7 @@
             "AmmoCount",
             "Text",
             "=",
-            "Gun.Ammo"
+            "Gun.Ammo + \" / \" + Gun.Magazine"
           ]
         },
         {
@@ -1787,6 +1835,30 @@
             "LevelNum",
             "=",
             "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetCameraCenterX"
+          },
+          "parameters": [
+            "",
+            "=",
+            "CameraCenterX()",
+            "\"Text\"",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetCameraCenterY"
+          },
+          "parameters": [
+            "",
+            "=",
+            "CameraCenterY()",
+            "\"Text\"",
+            ""
           ]
         }
       ]
@@ -1835,6 +1907,14 @@
             "",
             "",
             ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "MagazineText"
           ]
         }
       ]
@@ -2552,7 +2632,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "When ammo is 0, play sound"
+      "comment": "When ammo or magazine is 0, play sound"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -2600,6 +2680,51 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "MouseButtonFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"Right\""
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\NoBullets.mp3",
+            "",
+            "",
+            ""
+          ]
+        }
+      ]
+    },
+    {
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -2609,7 +2734,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "Reload"
+      "comment": "Reload ammo"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -2621,6 +2746,17 @@
           "parameters": [
             "",
             "\"Right\""
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            ">",
+            "0"
           ]
         },
         {
@@ -2637,9 +2773,42 @@
           },
           "parameters": [
             "Gun",
+            "BulletNeeded",
+            "=",
+            "Gun.MaxAmmo - Gun.Ammo"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "BulletNeeded",
+            "=",
+            "min(Gun.BulletNeeded, Gun.Magazine)"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
             "Ammo",
             "=",
-            "Gun.MaxAmmo"
+            "Gun.Ammo + Gun.BulletNeeded"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            "=",
+            "Gun.Magazine - Gun.BulletNeeded"
           ]
         },
         {
@@ -2652,6 +2821,161 @@
             "",
             "100",
             ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Set magazine to 0 and show text"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            "<",
+            "0"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            "=",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            "=",
+            "0"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Montre"
+          },
+          "parameters": [
+            "MagazineText",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Refill magazine"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"r\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SourisSurObjet"
+          },
+          "parameters": [
+            "AmmoBox",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            "<",
+            "Gun.MaxMagazine"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\crate-break-1-93926.mp3",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            "=",
+            "Gun.MaxMagazine"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "MagazineText"
           ]
         }
       ]
@@ -3025,6 +3349,39 @@
       "isLightingLayer": false,
       "isLocked": false,
       "name": "UI",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Light",
+          "doubleParameters": {
+            "elevation": 45,
+            "intensity": 1,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "groundColor": "64;64;64",
+            "skyColor": "255;255;255",
+            "top": "Y-"
+          },
+          "booleanParameters": {}
+        }
+      ]
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Text",
       "renderingType": "",
       "visibility": true,
       "cameras": [],

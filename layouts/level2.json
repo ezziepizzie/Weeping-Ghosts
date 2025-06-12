@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.270501260396256,
+    "zoomFactor": 0.38958562738273034,
     "windowMask": false
   },
   "objectsGroups": [
@@ -78,7 +78,7 @@
       "name": "AmmoCount",
       "persistentUuid": "4b0b8732-4ac6-496f-ab27-62302257899a",
       "width": 0,
-      "x": 1847,
+      "x": 1794,
       "y": 976,
       "zOrder": 10,
       "numberProperties": [],
@@ -277,7 +277,7 @@
       "name": "Bullet",
       "persistentUuid": "62696d66-a732-4af2-9f20-e519b09148fd",
       "width": 55,
-      "x": 1779,
+      "x": 1728,
       "y": 956,
       "zOrder": 7,
       "numberProperties": [],
@@ -572,6 +572,72 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0.6224066390041493,
+      "height": 242.73858921161826,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Radio",
+      "persistentUuid": "b1604e06-abd7-4f87-9a75-844c4c4afc2e",
+      "width": 300,
+      "x": 3474,
+      "y": 835,
+      "zOrder": 12,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 450,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AmmoBox",
+      "persistentUuid": "1bc5e003-a4df-4ae3-b6f4-726b6ad754da",
+      "width": 450,
+      "x": 0,
+      "y": 762,
+      "zOrder": 13,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "Text",
+      "name": "RadioText",
+      "persistentUuid": "11044a91-4b4c-4133-a8dc-f0a63de4d5b3",
+      "width": 0,
+      "x": 3386,
+      "y": 775,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "Text",
+      "name": "MagazineText",
+      "persistentUuid": "bd286000-3e8c-4720-bc1f-6efb6aaffba2",
+      "width": 0,
+      "x": 28,
+      "y": 731,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -617,7 +683,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "1",
+      "string": "1 / 24",
       "font": "",
       "textAlignment": "left",
       "characterSize": 50,
@@ -640,7 +706,7 @@
         "shadowOpacity": 127,
         "smoothed": true,
         "underlined": false,
-        "text": "1",
+        "text": "1 / 24",
         "font": "",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
@@ -968,6 +1034,21 @@
           "name": "MaxAmmo",
           "type": "number",
           "value": 6
+        },
+        {
+          "name": "Magazine",
+          "type": "number",
+          "value": 24
+        },
+        {
+          "name": "MaxMagazine",
+          "type": "number",
+          "value": 24
+        },
+        {
+          "name": "BulletNeeded",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -4421,6 +4502,53 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "RadioText",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "string": "Press 'F' to mute radio.",
+      "font": "Assets\\WeepingAsset\\who asks satan.ttf",
+      "textAlignment": "left",
+      "characterSize": 60,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Press 'F' to mute radio.",
+        "font": "Assets\\WeepingAsset\\who asks satan.ttf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 60,
+        "color": "255;255;255"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -4473,6 +4601,9 @@
       },
       {
         "objectName": "FlashlightRadius"
+      },
+      {
+        "objectName": "RadioText"
       }
     ]
   },
@@ -4537,7 +4668,7 @@
             "AmmoCount",
             "Text",
             "=",
-            "Gun.Ammo"
+            "Gun.Ammo + \" / \" + Gun.Magazine"
           ]
         },
         {
@@ -4556,6 +4687,30 @@
             "LevelNum",
             "=",
             "2"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetCameraCenterX"
+          },
+          "parameters": [
+            "",
+            "=",
+            "CameraCenterX()",
+            "\"Text\"",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetCameraCenterY"
+          },
+          "parameters": [
+            "",
+            "=",
+            "CameraCenterY()",
+            "\"Text\"",
+            ""
           ]
         }
       ]
@@ -4613,6 +4768,41 @@
             "",
             "",
             ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "RadioText"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "MagazineText"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"TriggerRadioEvent\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "RandomEventTimer",
+            "=",
+            "RandomInRange(3,7)"
           ]
         }
       ]
@@ -5691,7 +5881,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "When ammo is 0, play sound"
+      "comment": "When ammo or magazine is 0, play sound"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -5739,6 +5929,51 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "MouseButtonFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"Right\""
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\NoBullets.mp3",
+            "",
+            "",
+            ""
+          ]
+        }
+      ]
+    },
+    {
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -5748,7 +5983,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "Reload"
+      "comment": "Reload ammo"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -5760,6 +5995,17 @@
           "parameters": [
             "",
             "\"Right\""
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            ">",
+            "0"
           ]
         },
         {
@@ -5776,9 +6022,42 @@
           },
           "parameters": [
             "Gun",
+            "BulletNeeded",
+            "=",
+            "Gun.MaxAmmo - Gun.Ammo"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "BulletNeeded",
+            "=",
+            "min(Gun.BulletNeeded, Gun.Magazine)"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
             "Ammo",
             "=",
-            "Gun.MaxAmmo"
+            "Gun.Ammo + Gun.BulletNeeded"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            "=",
+            "Gun.Magazine - Gun.BulletNeeded"
           ]
         },
         {
@@ -5791,6 +6070,161 @@
             "",
             "100",
             ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Set magazine to 0 and show text"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            "<",
+            "0"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            "=",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            "=",
+            "0"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Montre"
+          },
+          "parameters": [
+            "MagazineText",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Refill magazine"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"r\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SourisSurObjet"
+          },
+          "parameters": [
+            "AmmoBox",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            "<",
+            "Gun.MaxMagazine"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Sound\\crate-break-1-93926.mp3",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Magazine",
+            "=",
+            "Gun.MaxMagazine"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "MagazineText"
           ]
         }
       ]
@@ -6221,6 +6655,764 @@
           ]
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Randomly trigger radio event"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"TriggerRadioEvent\"",
+            ">=",
+            "RandomEventTimer"
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "Radio",
+            "isPlaying",
+            "False",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"TriggerRadioEvent\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "RandomEventTimer",
+            "=",
+            "RandomInRange(7,15)"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Radio",
+            "isPlaying",
+            "True",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "Radio",
+            "isPlaying",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "KeyIndex",
+            "=",
+            "RandomInRange(0,5)"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetStringVariable"
+          },
+          "parameters": [
+            "TargetKey",
+            "=",
+            "RandomKeyGenerator[KeyIndex]"
+          ]
+        },
+        {
+          "type": {
+            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+          },
+          "parameters": [
+            "RadioText",
+            "Text",
+            "=",
+            "\"Press '\" + TargetKey + \"' to mute radio.\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Montre"
+          },
+          "parameters": [
+            "RadioText",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlayMusicCanal"
+          },
+          "parameters": [
+            "",
+            "Sound\\tv-static-7019.mp3",
+            "1",
+            "yes",
+            "50",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "SpawnRate",
+            "=",
+            "1.5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Mute radio"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "StringVariable"
+          },
+          "parameters": [
+            "TargetKey",
+            "=",
+            "\"a\""
+          ]
+        },
+        {
+          "type": {
+            "value": "KeyFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"a\""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Radio",
+            "isPlaying",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "SpawnRate",
+            "=",
+            "3"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "RadioText"
+          ]
+        },
+        {
+          "type": {
+            "value": "StopMusicCanal"
+          },
+          "parameters": [
+            "",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::PauseTween"
+          },
+          "parameters": [
+            "RadioText",
+            "Tween",
+            "\"MoveUp\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::PauseTween"
+          },
+          "parameters": [
+            "RadioText",
+            "Tween",
+            "\"MoveDown\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "StringVariable"
+          },
+          "parameters": [
+            "TargetKey",
+            "=",
+            "\"b\""
+          ]
+        },
+        {
+          "type": {
+            "value": "KeyFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"b\""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Radio",
+            "isPlaying",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "SpawnRate",
+            "=",
+            "3"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "RadioText"
+          ]
+        },
+        {
+          "type": {
+            "value": "StopMusicCanal"
+          },
+          "parameters": [
+            "",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::PauseTween"
+          },
+          "parameters": [
+            "RadioText",
+            "Tween",
+            "\"MoveUp\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::PauseTween"
+          },
+          "parameters": [
+            "RadioText",
+            "Tween",
+            "\"MoveDown\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "StringVariable"
+          },
+          "parameters": [
+            "TargetKey",
+            "=",
+            "\"c\""
+          ]
+        },
+        {
+          "type": {
+            "value": "KeyFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"c\""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Radio",
+            "isPlaying",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "SpawnRate",
+            "=",
+            "3"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "RadioText"
+          ]
+        },
+        {
+          "type": {
+            "value": "StopMusicCanal"
+          },
+          "parameters": [
+            "",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::PauseTween"
+          },
+          "parameters": [
+            "RadioText",
+            "Tween",
+            "\"MoveUp\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::PauseTween"
+          },
+          "parameters": [
+            "RadioText",
+            "Tween",
+            "\"MoveDown\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "StringVariable"
+          },
+          "parameters": [
+            "TargetKey",
+            "=",
+            "\"c\""
+          ]
+        },
+        {
+          "type": {
+            "value": "KeyFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"c\""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Radio",
+            "isPlaying",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "SpawnRate",
+            "=",
+            "3"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "RadioText"
+          ]
+        },
+        {
+          "type": {
+            "value": "StopMusicCanal"
+          },
+          "parameters": [
+            "",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::PauseTween"
+          },
+          "parameters": [
+            "RadioText",
+            "Tween",
+            "\"MoveUp\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::PauseTween"
+          },
+          "parameters": [
+            "RadioText",
+            "Tween",
+            "\"MoveDown\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "StringVariable"
+          },
+          "parameters": [
+            "TargetKey",
+            "=",
+            "\"d\""
+          ]
+        },
+        {
+          "type": {
+            "value": "KeyFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"d\""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Radio",
+            "isPlaying",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "SpawnRate",
+            "=",
+            "3"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "RadioText"
+          ]
+        },
+        {
+          "type": {
+            "value": "StopMusicCanal"
+          },
+          "parameters": [
+            "",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::PauseTween"
+          },
+          "parameters": [
+            "RadioText",
+            "Tween",
+            "\"MoveUp\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::PauseTween"
+          },
+          "parameters": [
+            "RadioText",
+            "Tween",
+            "\"MoveDown\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "StringVariable"
+          },
+          "parameters": [
+            "TargetKey",
+            "=",
+            "\"f\""
+          ]
+        },
+        {
+          "type": {
+            "value": "KeyFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"f\""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Radio",
+            "isPlaying",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "SpawnRate",
+            "=",
+            "3"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "RadioText"
+          ]
+        },
+        {
+          "type": {
+            "value": "StopMusicCanal"
+          },
+          "parameters": [
+            "",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::PauseTween"
+          },
+          "parameters": [
+            "RadioText",
+            "Tween",
+            "\"MoveUp\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::PauseTween"
+          },
+          "parameters": [
+            "RadioText",
+            "Tween",
+            "\"MoveDown\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "StringVariable"
+          },
+          "parameters": [
+            "TargetKey",
+            "=",
+            "\"h\""
+          ]
+        },
+        {
+          "type": {
+            "value": "KeyFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"h\""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "Radio",
+            "isPlaying",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "SpawnRate",
+            "=",
+            "3"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "RadioText"
+          ]
+        },
+        {
+          "type": {
+            "value": "StopMusicCanal"
+          },
+          "parameters": [
+            "",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::PauseTween"
+          },
+          "parameters": [
+            "RadioText",
+            "Tween",
+            "\"MoveUp\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::PauseTween"
+          },
+          "parameters": [
+            "RadioText",
+            "Tween",
+            "\"MoveDown\""
+          ]
+        }
+      ]
     }
   ],
   "layers": [
@@ -6330,6 +7522,39 @@
       "isLightingLayer": false,
       "isLocked": false,
       "name": "UI",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Light",
+          "doubleParameters": {
+            "elevation": 45,
+            "intensity": 1,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "groundColor": "64;64;64",
+            "skyColor": "255;255;255",
+            "top": "Y-"
+          },
+          "booleanParameters": {}
+        }
+      ]
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Text",
       "renderingType": "",
       "visibility": true,
       "cameras": [],

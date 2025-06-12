@@ -723,6 +723,42 @@
         "name": "Assets\\WeepingAsset\\HowToPlay.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/rust-ammunition-box-wooden-box-ammunition-9abd9f5db7e32cab85dd2bd0a9f3c427.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\rust-ammunition-box-wooden-box-ammunition-9abd9f5db7e32cab85dd2bd0a9f3c427.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/WeepingAsset/radio-vecteur-boombox-u6536u97f3u673a-vector-radio-54bea6d153f523da760eedfa61e32a8d.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\WeepingAsset\\radio-vecteur-boombox-u6536u97f3u673a-vector-radio-54bea6d153f523da760eedfa61e32a8d.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/tv-static-7019.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\tv-static-7019.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sound/crate-break-1-93926.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sound\\crate-break-1-93926.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -816,6 +852,179 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "AmmoBox",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\WeepingAsset\\rust-ammunition-box-wooden-box-ammunition-9abd9f5db7e32cab85dd2bd0a9f3c427.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 107
+                      },
+                      {
+                        "x": 505,
+                        "y": 107
+                      },
+                      {
+                        "x": 505,
+                        "y": 418
+                      },
+                      {
+                        "x": 10,
+                        "y": 418
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Radio",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "isPlaying",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\WeepingAsset\\radio-vecteur-boombox-u6536u97f3u673a-vector-radio-54bea6d153f523da760eedfa61e32a8d.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 1017,
+                        "y": 0
+                      },
+                      {
+                        "x": 1017,
+                        "y": 782
+                      },
+                      {
+                        "x": 0,
+                        "y": 782
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "MagazineText",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "string": "Hover and press 'R' \nto refill magazine.",
+      "font": "Assets\\WeepingAsset\\who asks satan.ttf",
+      "textAlignment": "left",
+      "characterSize": 60,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Hover and press 'R' \nto refill magazine.",
+        "font": "Assets\\WeepingAsset\\who asks satan.ttf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 60,
+        "color": "255;255;255"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -829,6 +1038,15 @@
       },
       {
         "objectName": "DamageIndicator"
+      },
+      {
+        "objectName": "AmmoBox"
+      },
+      {
+        "objectName": "Radio"
+      },
+      {
+        "objectName": "MagazineText"
       }
     ]
   },
@@ -837,12 +1055,12 @@
     {
       "name": "SpawnRate",
       "type": "number",
-      "value": 2
+      "value": 3
     },
     {
       "name": "MaxTime",
       "type": "number",
-      "value": 40
+      "value": 60
     },
     {
       "name": "gameResult",
@@ -856,6 +1074,51 @@
     },
     {
       "name": "LevelNum",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "RandomKeyGenerator",
+      "type": "array",
+      "children": [
+        {
+          "type": "string",
+          "value": "a"
+        },
+        {
+          "type": "string",
+          "value": "b"
+        },
+        {
+          "type": "string",
+          "value": "c"
+        },
+        {
+          "type": "string",
+          "value": "d"
+        },
+        {
+          "type": "string",
+          "value": "f"
+        },
+        {
+          "type": "string",
+          "value": "h"
+        }
+      ]
+    },
+    {
+      "name": "TargetKey",
+      "type": "string",
+      "value": "0"
+    },
+    {
+      "name": "KeyIndex",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "RandomEventTimer",
       "type": "number",
       "value": 0
     }
@@ -903,6 +1166,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/panelspritebutton"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/flash"
     }
   ],
   "externalLayouts": []
