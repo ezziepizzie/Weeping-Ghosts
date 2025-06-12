@@ -2761,6 +2761,17 @@
         },
         {
           "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Ammo",
+            "<",
+            "Gun.MaxAmmo"
+          ]
+        },
+        {
+          "type": {
             "value": "BuiltinCommonInstructions::Once"
           },
           "parameters": []

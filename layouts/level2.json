@@ -6010,6 +6010,17 @@
         },
         {
           "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Gun",
+            "Ammo",
+            "<",
+            "Gun.MaxAmmo"
+          ]
+        },
+        {
+          "type": {
             "value": "BuiltinCommonInstructions::Once"
           },
           "parameters": []
@@ -6798,7 +6809,7 @@
             "Sound\\tv-static-7019.mp3",
             "1",
             "yes",
-            "50",
+            "60",
             ""
           ]
         },
